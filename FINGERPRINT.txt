@@ -1,3 +1,5 @@
-# I-314 production attestation — ML-DSA-65 (FIPS 204) public key SHA-256
-# Compare against https://qlab.i-314.com/api/pqc/attest  (field: public_key_fingerprint_sha256)
+# I-314 production attestation — ML-DSA-65 (FIPS 204) public key fingerprint
+# SHA-256 of the raw 1952-byte public key (= the last 1952 bytes of its DER SPKI).
+# Compute it from the key that verified the signature, not from a field of the response:
+#   openssl pkey -pubin -in pub.pem -outform DER | tail -c 1952 | openssl dgst -sha256
 3474f51e5400d12a105cd991796c822833aff02bc47bd16bb9f1c1e62017444b
