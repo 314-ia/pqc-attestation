@@ -1,0 +1,3 @@
+# I-314 attestation — revoked keys. One key id ("mldsa65-<16 hex>") or SHA-256 fingerprint per line,
+# followed by a comment with the date and the reason. Verifiers reject any listed key or root.
+# (none)
